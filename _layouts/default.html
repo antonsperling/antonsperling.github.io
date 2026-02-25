@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'de' }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title | default: "Full Trottel Racing" }}</title>
+    {% if site.description %}
+    <meta name="description" content="{{ page.excerpt | strip_html | default: site.description }}" />
+    {% endif %}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} Feed" href="{{ '/feed.xml' | relative_url }}" />
+  </head>
+
+  <body>
+    <header role="banner" style="margin-bottom:1rem;">
+      <div style="max-width:1100px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;">
+        <a href="{{ '/' | relative_url }}" style="text-decoration:none;color:inherit;">
+          <h1 style="margin:0;font-size:1.25rem;">{{ site.title | default: "Full Trottel Racing" }}</h1>
+        </a>
+
+        <nav aria-label="Hauptnavigation">
+          <a href="{{ '/' | relative_url }}" style="margin-right:0.75rem;">Start</a>
+          <a href="{{ '/our-team/' | relative_url }}" style="margin-right:0.75rem;">Our Team</a>
+          <a href="{{ '/blog/' | relative_url }}" style="margin-right:0.75rem;">Blog</a>
+          <a href="{{ '/impressum/' | relative_url }}" style="margin-right:0.5rem;">Impressum</a>
+          <a href="{{ '/datenschutz/' | relative_url }}">Datenschutz</a>
+        </nav>
+      </div>
+    </header>
+
+    {% include cookie-banner.html %}
+
+    <main role="main" style="max-width:1100px;margin:0 auto;padding:0 1rem;">
+      <article>
+        {{ content }}
+      </article>
+    </main>
+
+    <footer role="contentinfo" style="margin-top:2rem;padding:1rem 0;background:#f7f7f7;">
+      <div style="max-width:1100px;margin:0 auto;padding:0 1rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;">
+        <div style="color:#666;font-size:0.9rem;">
+          &copy; {{ site.time | date: "%Y" }} {{ site.title | default: "Full Trottel Racing" }}.
+        </div>
+        <div style="font-size:0.9rem;">
+          <a href="{{ '/impressum/' | relative_url }}" style="margin-right:0.5rem;">Impressum</a>
+          <a href="{{ '/datenschutz/' | relative_url }}">Datenschutz</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="{{ '/assets/js/cookie-consent.js' | relative_url }}"></script>
+    <script>
+      // Example hook: analytics initialization should listen for cookieConsentGiven.
+      // If you add analytics later, call initAnalytics() on that event.
+      document.addEventListener('cookieConsentGiven', function () {
+        // initAnalytics(); // enable once you add a provider and implement initAnalytics()
+        console.log('Cookie consent given — analytics may be initialised here.');
+      });
+    </script>
+  </body>
+</html>
