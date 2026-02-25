@@ -1,0 +1,13 @@
+title: "Full Trottel Racing"
+description: "Motorcycle racing team"
+baseurl: ""
+u: "https://antonsperling.github.io"
+theme: minima
+plugins:
+  - jekyll-feed
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
