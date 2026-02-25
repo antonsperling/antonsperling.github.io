@@ -1,0 +1,6 @@
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; line-height:1.6; padding:1rem; color:#222; background:#fff; }
+a { color: #b10d0d; }
+table { width:100%; border-collapse: collapse; margin-bottom:1rem; }
+table th, table td { border:1px solid #ddd; padding:0.5rem; text-align:left; }
+#cookie-banner button { margin-left:0.5rem; padding:0.4rem 0.6rem; }
+img { max-width:100%; height:auto; display:block; margin: 0.5rem 0; }

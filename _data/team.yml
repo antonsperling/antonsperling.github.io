@@ -1,0 +1,8 @@
+- name: "Anton Sperling"
+  role: "Team Manager / Rider"
+  bio: "Kurzbiografie hier. Ersetze den Platzhaltertext mit dem echten Text."
+  photo: "/assets/images/anton.jpg"
+- name: "Teammitglied 2"
+  role: "Mechanic"
+  bio: "Kurzbiografie hier."
+  photo: "/assets/images/team-member-2.jpg"

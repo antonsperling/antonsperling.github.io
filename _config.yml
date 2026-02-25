@@ -1,7 +1,7 @@
 title: "Full Trottel Racing"
 description: "Motorcycle racing team"
 baseurl: ""
-u: "https://antonsperling.github.io"
+url: "https://antonsperling.github.io"
 theme: minima
 plugins:
   - jekyll-feed
