@@ -1,7 +1,8 @@
 title: "Full Trottel Racing"
-description: "Motorcycle racing team"
+description: "Motorcycle racing team — News, trackdays and build reports"
+logo: "/assets/images/logo.png"
 baseurl: ""
-url: "https://antonsperling.github.io"
+u: "https://antonsperling.github.io"
 theme: minima
 plugins:
   - jekyll-feed
