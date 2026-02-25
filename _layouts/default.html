@@ -4,26 +4,75 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title | default: "Full Trottel Racing" }}</title>
-    {% if site.description %}
-    <meta name="description" content="{{ page.excerpt | strip_html | default: site.description }}" />
+
+    {%- assign meta_title = page.title | default: site.title -%}
+    {%- assign meta_description = page.excerpt | strip_html | truncate:160 | default: page.description | default: site.description -%}
+    {%- assign page_url = page.url | absolute_url -%}
+    {%- assign meta_image = page.image | default: site.social.image | default: site.url | append: '/assets/images/social-preview.jpg' -%}
+
+    <title>{{ meta_title }}{% if site.title and page.title %} — {{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ meta_description }}" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="{{ page_url }}" />
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="{{ page.lang | default: site.lang | default: 'de_DE' }}" />
+    <meta property="og:site_name" content="{{ site.title | default: 'Full Trottel Racing' }}" />
+    <meta property="og:title" content="{{ meta_title }}" />
+    <meta property="og:description" content="{{ meta_description }}" />
+    <meta property="og:url" content="{{ page_url }}" />
+    <meta property="og:type" content="{% if page.layout == 'post' or page.collection == 'posts' %}article{% else %}website{% endif %}" />
+    <meta property="og:image" content="{{ meta_image | absolute_url }}" />
+    <meta property="og:image:alt" content="{{ page.image_alt | default: site.title | default: 'Full Trottel Racing' }}" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    {% if site.social.twitter %}
+    <meta name="twitter:site" content="{{ site.social.twitter }}" />
     {% endif %}
+    <meta name="twitter:title" content="{{ meta_title }}" />
+    <meta name="twitter:description" content="{{ meta_description }}" />
+    <meta name="twitter:image" content="{{ meta_image | absolute_url }}" />
+
+    <!-- JSON-LD (basic) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "{{ site.title | escape }}",
+      "url": "{{ site.url | escape }}",
+      "logo": "{{ site.logo | default: site.url | append: '/assets/images/social-preview.jpg' | absolute_url }}"
+    }
+    </script>
+
+    <!-- Styles & feed -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} Feed" href="{{ '/feed.xml' | relative_url }}" />
   </head>
 
   <body>
-    <header role="banner" style="margin-bottom:1rem;">
-      <div style="max-width:1100px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;">
-        <a href="{{ '/' | relative_url }}" style="text-decoration:none;color:inherit;">
-          <h1 style="margin:0;font-size:1.25rem;">{{ site.title | default: "Full Trottel Racing" }}</h1>
-        </a>
+    <header role="banner" class="site-header" style="border-bottom:1px solid #eee;">
+      <div class="wrap" style="max-width:1100px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+        <div style="display:flex;align-items:center;gap:0.75rem;">
+          <a href="{{ '/' | relative_url }}" style="display:inline-flex;align-items:center;text-decoration:none;color:inherit;">
+            {% if site.logo %}
+              <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" style="height:44px;width:auto;display:block;margin-right:0.5rem;" />
+            {% else %}
+              <span style="font-weight:700;font-size:1.1rem;">{{ site.title | default: "Full Trottel Racing" }}</span>
+            {% endif %}
+          </a>
+        </div>
 
-        <nav aria-label="Hauptnavigation">
-          <a href="{{ '/' | relative_url }}" style="margin-right:0.75rem;">Start</a>
-          <a href="{{ '/our-team/' | relative_url }}" style="margin-right:0.75rem;">Our Team</a>
-          <a href="{{ '/blog/' | relative_url }}" style="margin-right:0.75rem;">Blog</a>
-          <a href="{{ '/impressum/' | relative_url }}" style="margin-right:0.5rem;">Impressum</a>
+        <button id="nav-toggle" aria-expanded="false" aria-controls="main-nav" style="display:none;background:none;border:0;font-size:1.1rem;">
+          ☰
+        </button>
+
+        <nav id="main-nav" aria-label="Hauptnavigation" style="display:flex;gap:0.75rem;">
+          <a href="{{ '/' | relative_url }}">Start</a>
+          <a href="{{ '/our-team/' | relative_url }}">Our Team</a>
+          <a href="{{ '/blog/' | relative_url }}">Blog</a>
+          <a href="{{ '/impressum/' | relative_url }}">Impressum</a>
           <a href="{{ '/datenschutz/' | relative_url }}">Datenschutz</a>
         </nav>
       </div>
@@ -31,14 +80,14 @@
 
     {% include cookie-banner.html %}
 
-    <main role="main" style="max-width:1100px;margin:0 auto;padding:0 1rem;">
-      <article>
+    <main role="main" class="site-main" style="max-width:1100px;margin:1.25rem auto;padding:0 1rem;">
+      <article class="page-content">
         {{ content }}
       </article>
     </main>
 
-    <footer role="contentinfo" style="margin-top:2rem;padding:1rem 0;background:#f7f7f7;">
-      <div style="max-width:1100px;margin:0 auto;padding:0 1rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;">
+    <footer role="contentinfo" style="margin-top:2rem;padding:1rem 0;background:#fafafa;border-top:1px solid #eee;">
+      <div class="wrap" style="max-width:1100px;margin:0 auto;padding:0 1rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;">
         <div style="color:#666;font-size:0.9rem;">
           &copy; {{ site.time | date: "%Y" }} {{ site.title | default: "Full Trottel Racing" }}.
         </div>
@@ -49,13 +98,46 @@
       </div>
     </footer>
 
+    <script>
+      // Mobile nav toggle
+      (function(){
+        var nav = document.getElementById('main-nav');
+        var btn = document.getElementById('nav-toggle');
+        function updateNavDisplay() {
+          if (window.matchMedia('(max-width:700px)').matches) {
+            btn.style.display = 'inline-block';
+            nav.style.display = 'none';
+          } else {
+            btn.style.display = 'none';
+            nav.style.display = 'flex';
+          }
+        }
+        updateNavDisplay();
+        window.addEventListener('resize', updateNavDisplay);
+        if (btn) {
+          btn.addEventListener('click', function () {
+            var expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !expanded);
+            if (nav.style.display === 'none') {
+              nav.style.display = 'flex';
+              nav.style.flexDirection = 'column';
+              nav.style.rowGap = '0.5rem';
+            } else {
+              nav.style.display = 'none';
+            }
+          });
+        }
+      })();
+    </script>
+
     <script src="{{ '/assets/js/cookie-consent.js' | relative_url }}"></script>
     <script>
-      // Example hook: analytics initialization should listen for cookieConsentGiven.
-      // If you add analytics later, call initAnalytics() on that event.
+      // Hook where analytics can be initialised once consent is given.
       document.addEventListener('cookieConsentGiven', function () {
-        // initAnalytics(); // enable once you add a provider and implement initAnalytics()
-        console.log('Cookie consent given — analytics may be initialised here.');
+        // Example: load analytics script here
+        // loadScript('https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID');
+        // initAnalytics();
+        console.log('cookieConsentGiven fired — initialise analytics here if configured.');
       });
     </script>
   </body>
