@@ -336,7 +336,7 @@ machen.
 
 Ich bin zu alt für diesen Scheiß.
 
-![Meme](/assets/images/pitbike-04.jpg)
+![Meme](/assets/images/too-old-small.gif)
 
 Ich war zwei Mal dort und werde vermutlich nicht so schnell
 wiederkommen. Schade, denn die Strecke und Veranstalter sind Top.
