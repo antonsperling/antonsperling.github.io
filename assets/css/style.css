@@ -168,6 +168,9 @@ body{
   display:inline-block;
 }
 
+.team-table { background:transparent; border:none; width:100%; }
+.team-table th, .team-table td { border:none; }
+
 /* Tables */
 table{ width:100%; border-collapse:collapse; margin: 1rem 0; background:var(--surface); }
 table th, table td{ border:1px solid var(--border); padding:0.6rem 0.65rem; text-align:left; vertical-align:top; }

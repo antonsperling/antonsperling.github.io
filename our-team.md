@@ -5,25 +5,19 @@ permalink: /our-team/
 ---
 
 # Our Team
-<table>
+<table id="our-team-table" class="team-table">
 {% for member in site.data.team %}
 <tr>
 <td rowspan="3">
-    <img src="{{ member.photo | relative_url }}" alt="no picture" style="height:100px;width:auto;display:block;margin-right:0.5rem;" />
+    <img src="{{ member.photo | relative_url }}" alt="no picture" style="height:200px;width:auto;display:block;margin-right:0.5rem;" />
 </td>
-<td>
-<h2>{{ member.name }}</h2>
-</td>
+<td><h2>{{ member.name }}</h2></td>
 </tr>
 <tr>
-<td>
-<b>Rolle:</b> {{ member.role }}
-</td>
+<td><b>Rolle:</b> {{ member.role }}</td>
 </tr>
 <tr>
-<td>
-{{ member.bio }}
-</td>
+<td>{{ member.bio }}</td>
 </tr>
 
 {% endfor %}
