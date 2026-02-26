@@ -77,8 +77,4 @@
     }
   });
 
-  // Optional: if acceptance was already given, ensure banner hidden (defensive)
-  if (accepted === 'yes' || accepted === 'no') {
-    banner.style.display = 'none';
-  }
 })();
