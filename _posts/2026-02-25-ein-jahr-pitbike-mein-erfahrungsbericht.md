@@ -1,13 +1,12 @@
 ---
 layout: post
-title: "Ein Jahr Pitbike -- Mein Erfahrungsbericht"
+title: "Ein Jahr Pitbike"
 date: 2026-02-25
-author: "Anton Sperling"
+author: "the captain"
 categories: ["blog"]
 lang: "de"
+excerpt: "Ein Erfahrungsbericht mit Tipps und Steckenbeschreibungen"
 ---
-
-Tach allerseits,
 
 das wird hier meine Geschichte zu meinem Pitbike Werdegang. Gespickt mit
 Fahrberichten, Erlebnissen, Tipps und Tricks, sowie meine ganz

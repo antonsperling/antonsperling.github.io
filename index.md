@@ -10,7 +10,7 @@ permalink: /
 
 # Full Trottel Racing
 
-Willkommen auf der Seite des Full Trottel Racing Teams!
+
 
 Hier findest du unsere kommenden Trackdays:
 
@@ -35,9 +35,4 @@ Hier findest du unsere kommenden Trackdays:
   </tbody>
 </table>
 
-<nav>
-- [Our Team](/our-team/)
-- [Blog](/blog/)
-- [Impressum](/impressum/)
-- [Datenschutz](/datenschutz/)
-</nav>
+
