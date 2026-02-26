@@ -9,7 +9,7 @@ permalink: /our-team/
 {% for member in site.data.team %}
 <tr>
 <td rowspan="3">
-{{ member.photo }}
+    <img src="{{ member.photo | relative_url }}" alt="no picture" style="height:100px;width:auto;display:block;margin-right:0.5rem;" />
 </td>
 <td>
 ## {{ member.name }}
