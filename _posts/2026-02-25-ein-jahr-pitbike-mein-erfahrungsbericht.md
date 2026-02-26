@@ -60,7 +60,7 @@ ist Asphalt und hat sehr guten Grip. Es gibt Stehtische und
 Sitzgelegenheiten neben der Strecke. Die Gastro ist räumlich abgetrennt
 und bietet alles was man braucht.
 
-Videobeweis: https://youtu.be/W2jGUgh-VYM
+[Videobeweis Gevelsberg](https://youtu.be/W2jGUgh-VYM) 
 
 ## Kapitel II: Die Nachbereitung (Oktober 2024)
 
@@ -113,7 +113,7 @@ die Gastro, sowie Toiletten sind am anderen Ende der Halle. Ist halt
 alles für Leihkarts ausgelegt. Die Strecke ist an einigen Stellen,
 mangels Fenster und ausgeklügelter Beleuchtung, leider eher düster.
 
-Videobeweis: https://youtu.be/BsYVSYBjZgE
+[Videobeweis Wuppertal](https://youtu.be/BsYVSYBjZgE)
 
 *Update 01/2026:*
 
@@ -266,7 +266,7 @@ ersten Mal mit meinem neuen Lieblingsspielzeug. Weiß auch gar nicht
 wieso sich alle über die Originalbremse beschweren. Hat alles sehr gut
 funktioniert. Noch ein Spoiler: Gilt nicht für Indoor-Kartstrecken.
 
-Videobeweis: https://youtu.be/MOOLd6Idpr0
+[Videobeweis Witten](https://youtu.be/MOOLd6Idpr0)
 
 **Streckenbericht Witten:** Es handelt sich um einen Parkplatz
 mit ordentlichem Asphalt und einigen Regenrinnen. Eine davon musste in
@@ -289,7 +289,7 @@ hier gut bedient.
 
 ## Kapitel VI: Upgrades und Zubehör (November 2024)
 
-Beim ersten Termin mit eigenem Bike in Wuppertal hatte ich die ![Bremse und Scheibe](/assets/images/pitbike-02.jpg) glorreiche Idee, mit dem Luftdruck
+Beim ersten Termin mit eigenem Bike in Wuppertal hatte ich die glorreiche Idee, mit dem Luftdruck
 rumzuspielen. Also mal auf 1,7 kalt eingestellt und los. Im Ergebnis
 eine Vollkatastrophe. Alles wieder zurück und fahren. Nach 4 Turns ist
 meine rechte Hand fast taub. Es muss also unbedingt doch die Bremse
@@ -299,6 +299,8 @@ hilfsbereit und geben wertvolle Tipps für den Umbau.
 Empfohlen wird eine Formula Bremse, andere Fußrasten und schmale/leichte
 Felgen.
 
+![Bremse und Scheibe](/assets/images/pitbike-02.jpg)
+
 Bremse wird in Italien bestellt, Bremsscheibe (220mm) und Fußrasten in
 China. Die Felgen besorge ich mir dann irgendwann.
 
@@ -307,7 +309,9 @@ Bremsscheibe gepasst. Also mit M10 Muttern, als Distanzhülsen, einen
 größeren Abstand herstellen und mit ordentlichen Schrauben befestigen.
 Tut bis heute seinen Zweck.
 
-![Fußraste](/assets/images/pitbike-03.jpg) Bei den Fußrasten habe ich mich dazu
+![Fußraste](/assets/images/pitbike-03.jpg)
+
+Bei den Fußrasten habe ich mich dazu
 entschieden, die verstellbaren und klappbaren Rasten meiner alten Honda
 zu recyclen. Nur muss statt der Aluraste etwas aus Kunststoff her.
 Selbst drucken ist viel zu instabil. Also Kunststoffrasten aus China
@@ -347,7 +351,7 @@ Eigenbiker einfach fahren. Ach ja, da die Strecke eben so riesig ist und
 es eigentlich nur einen Streckenposten in der Mitte gibt, dauern die
 Gelb-Phasen schon sehr lang.
 
-Videobeweis: https://youtu.be/EnOut4nsh4g
+[Videobeweis Essen](https://youtu.be/EnOut4nsh4g)
 
 Ja, irgendwann werde auch ich die Beleuchtungseinstellungen auf der
 Kamera lernen. Momentan leider noch zu blöde für so'n kram
@@ -362,11 +366,10 @@ Modelle, habe ich als alter Sparfuchs sofort erkannt, dass kann ich mir
 auch selbst 3D-drucken. Also mit dem CAD Programm meiner Wahl mal 2-3
 Prototypen gebaut und gedruckt. Empfehlung: Nutzt dafür ein möglichst
 flexibles Material. ABS oder PLA oder PETG sind wirklich nur bedingt
-geeignet. Ich habe das mit ![TPU-Teil](/assets/images/pitbike-05.jpg) gedruckt und bin bis heute zufrieden.
+geeignet. Ich habe das mit gedruckt und bin bis heute zufrieden.
 
 ![3D CAD](/assets/images/pitbike-06.jpg)
-
-![Collage Bike & Felgen](/assets/images/pitbike-07.jpg)
+![TPU-Teil](/assets/images/pitbike-05.jpg)
 
 Während eines langen Winters kann man ja auch nicht nur fahren. Und
 nachdem ich bei einer Veranstaltung war, bei welcher noch zwei andere Bikes komplett identisch zu meinem aussahen,
@@ -380,11 +383,12 @@ Da ich überhaupt nicht lackieren kann und das ganze natürlich auch nicht
 komplett nach Pfusch aussehen soll, habe ich mich von den Comic-Style
 Lackierungen inspirieren lassen. Einfach zu machen und kleinere Fehler
 sieht man nicht.
+![Collage Bike & Felgen](/assets/images/pitbike-07.jpg)
 
 Ist am Ende sehr individuell und ich hatte viel Spaß an der kreativen
 Arbeit. Bitte nicht nachmachen ;-)
 
-Video Lackierung: https://youtu.be/FLpY55zev-s
+[Video Lackierung](https://youtu.be/FLpY55zev-s)
 
 ## Kapitel IX: Wieder neue Strecken zu entdecken (März/April 2025)
 
