@@ -1,14 +1,26 @@
 // Cookie consent with smooth auto-close and cross-tab sync
 (function () {
+  // if this script is accidentally included twice (or executed again), do nothing
+  if (window.__cookieConsentInit) return;
+  window.__cookieConsentInit = true;
+
   var banner = document.getElementById('cookie-banner');
   if (!banner) return;
 
   var acceptBtn = document.getElementById('cookie-accept');
   var declineBtn = document.getElementById('cookie-decline');
 
-  // Show banner only if no decision yet
-  var accepted = localStorage.getItem('ft_cookie_accept');
-  if (!accepted) banner.style.display = 'block';
+  // Show banner only if no decision yet.  Read value each time so
+  // any synchronous changes are respected.
+  function shouldShowBanner() {
+    var val = localStorage.getItem('ft_cookie_accept');
+    return !(val === 'yes' || val === 'no');
+  }
+
+  if (shouldShowBanner()) {
+    banner.style.display = 'block';
+    console.log('cookie-banner: showing (no consent yet)');
+  }
 
   // Small helper to fade out then hide
   function fadeOutAndHide(el, duration) {
@@ -34,7 +46,11 @@
   // Safe click handlers (guard for missing elements)
   if (acceptBtn) {
     acceptBtn.addEventListener('click', function () {
-      localStorage.setItem('ft_cookie_accept', 'yes');
+      try {
+        localStorage.setItem('ft_cookie_accept', 'yes');
+      } catch (e) {
+        console.warn('cookie-banner: failed to save consent', e);
+      }
       fadeOutAndHide(banner, 300);
       document.dispatchEvent(new Event('cookieConsentGiven'));
     });
@@ -42,7 +58,11 @@
 
   if (declineBtn) {
     declineBtn.addEventListener('click', function () {
-      localStorage.setItem('ft_cookie_accept', 'no');
+      try {
+        localStorage.setItem('ft_cookie_accept', 'no');
+      } catch (e) {
+        console.warn('cookie-banner: failed to save decline', e);
+      }
       fadeOutAndHide(banner, 300);
     });
   }
