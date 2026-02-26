@@ -372,7 +372,9 @@ geeignet. Ich habe das mit gedruckt und bin bis heute zufrieden.
 ![TPU-Teil](/assets/images/pitbike-05.jpg)
 
 ~~~
-Update 02/2026: Ich habe gesehen, dass es bei Schnurri-Racing auch einen Lenkanschlag gibt.
+Update 02/2026:
+
+Ich habe gesehen, dass es bei Schnurri-Racing auch einen Lenkanschlag gibt.
 Der sieht deutlich professioneller und stabiler aus als mein Prototyp
 ~~~
 
