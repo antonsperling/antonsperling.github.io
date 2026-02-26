@@ -4,6 +4,10 @@ title: "Full Trottel Racing"
 permalink: /
 ---
 
+<div class="hero-logo">
+  <img src="/assets/images/logo.png" alt="Full Trottel Racing Logo" />
+</div>
+
 # Full Trottel Racing
 
 Willkommen auf der Seite des Full Trottel Racing Teams!

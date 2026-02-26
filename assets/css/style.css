@@ -1,6 +1,8 @@
 /* Basic system font stack, readable defaults */
 :root{
   --accent: #b10d0d;
+  --accent-light: #e3f2fd;
+  --link: #0066cc;
   --muted: #666;
   --bg: #ffffff;
   --surface: #fafafa;
@@ -14,6 +16,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --accent: #ff6b6b;
+    --accent-light: #1e3a5f;
+    --link: #4a9eff;
     --muted: #aaa;
     --bg: #1a1a1a;
     --surface: #222;
@@ -25,13 +29,14 @@
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height:1.6;
   color:var(--text);
   background:var(--bg);
   margin:0;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
+  font-size:15px;
 }
 
 /* Layout wrapper used in header/footer/main */
@@ -98,13 +103,13 @@ body{
 }
 #lang-switch-btn:hover,
 #lang-switch-btn:focus{
-  background:rgba(177,13,13,0.1);
+  background:var(--accent-light);
 }
 
 @media (prefers-color-scheme: dark) {
   #lang-switch-btn:hover,
   #lang-switch-btn:focus{
-    background:rgba(255,107,107,0.15);
+    background:#1e3a5f;
   }
 }
 
@@ -136,8 +141,32 @@ body{
   line-height:1.2;
   margin-top:1.25rem;
   margin-bottom:0.5rem;
+  color:var(--text);
 }
 .page-content p { margin:0 0 1rem 0; }
+.page-content a {
+  color:var(--link);
+  text-decoration:none;
+  border-bottom:1px solid var(--link);
+  transition:background-color .12s ease;
+}
+.page-content a:hover {
+  background-color:var(--accent-light);
+  border-bottom:1px solid var(--link);
+}
+
+.hero-logo {
+  text-align:center;
+  margin:2rem 0 3rem 0;
+}
+
+.hero-logo img {
+  max-width:300px;
+  width:100%;
+  height:auto;
+  margin:0;
+  display:inline-block;
+}
 
 /* Tables */
 table{ width:100%; border-collapse:collapse; margin: 1rem 0; background:var(--surface); }
@@ -195,10 +224,15 @@ a:focus, button:focus, input:focus { outline: 3px solid rgba(33,150,243,0.15); o
 }
 
 /* Small print / code */
-pre, code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace; background:#f6f6f6; color:#222; padding:0.2rem 0.4rem; border-radius:4px; font-size:0.9rem; }
+code { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, "Roboto Mono", monospace; background:var(--accent-light); color:#0d47a1; padding:0.2rem 0.4rem; border-radius:4px; font-size:0.9rem; }
+
+pre { background:var(--surface); color:var(--text); padding:1rem; border-radius:6px; overflow-x:auto; border:1px solid var(--border); }
+
+pre code { background:transparent; color:inherit; padding:0; }
 
 @media (prefers-color-scheme: dark) {
-  pre, code { background:#2a2a2a; color:#e0e0e0; }
+  code { background:#1e3a5f; color:#4a9eff; }
+  pre { background:#2a2a2a; border-color:#333; }
 }
 
 /* Improve readability on large screens */
