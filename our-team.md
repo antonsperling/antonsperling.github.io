@@ -12,12 +12,12 @@ permalink: /our-team/
     <img src="{{ member.photo | relative_url }}" alt="no picture" style="height:100px;width:auto;display:block;margin-right:0.5rem;" />
 </td>
 <td>
-## {{ member.name }}
+<h2>{{ member.name }}</h2>
 </td>
 </tr>
 <tr>
 <td>
-**Rolle:** {{ member.role }}
+<b>Rolle:</b> {{ member.role }}
 </td>
 </tr>
 <tr>
