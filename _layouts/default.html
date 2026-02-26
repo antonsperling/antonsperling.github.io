@@ -50,6 +50,14 @@
     <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" />
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} Feed" href="{{ '/feed.xml' | relative_url }}" />
+
+    <!-- Translations (i18n) -->
+    <script>
+      window.translations = {
+        en: {{ site.data.i18n.en | jsonify }},
+        de: {{ site.data.i18n.de | jsonify }}
+      };
+    </script>
   </head>
 
   <body>
@@ -69,12 +77,13 @@
           ☰
         </button>
 
-        <nav id="main-nav" aria-label="Hauptnavigation" style="display:flex;gap:0.75rem;">
-          <a href="{{ '/' | relative_url }}">Start</a>
-          <a href="{{ '/our-team/' | relative_url }}">Our Team</a>
-          <a href="{{ '/blog/' | relative_url }}">Blog</a>
-          <a href="{{ '/impressum/' | relative_url }}">Impressum</a>
-          <a href="{{ '/datenschutz/' | relative_url }}">Datenschutz</a>
+        <nav id="main-nav" aria-label="Hauptnavigation" style="display:flex;gap:0.75rem;align-items:center;">
+          <a href="{{ '/' | relative_url }}" data-i18n="nav.home">Start</a>
+          <a href="{{ '/our-team/' | relative_url }}" data-i18n="nav.team">Our Team</a>
+          <a href="{{ '/blog/' | relative_url }}" data-i18n="nav.blog">Blog</a>
+          <a href="{{ '/impressum/' | relative_url }}" data-i18n="nav.impressum">Impressum</a>
+          <a href="{{ '/datenschutz/' | relative_url }}" data-i18n="nav.datenschutz">Datenschutz</a>
+          <button id="lang-switch-btn" type="button" style="background:transparent;border:1px solid var(--border);padding:6px 12px;border-radius:4px;cursor:pointer;font-weight:500;font-size:0.9rem;color:inherit;">Deutsch</button>
         </nav>
       </div>
     </header>
@@ -132,6 +141,7 @@
     </script>
 
     <script src="{{ '/assets/js/cookie-consent.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/i18n.js' | relative_url }}"></script>
     <script>
       // Hook where analytics can be initialised once consent is given.
       document.addEventListener('cookieConsentGiven', function () {

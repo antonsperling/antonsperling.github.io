@@ -93,6 +93,21 @@ body{
   font-weight:700;
 }
 
+#lang-switch-btn{
+  transition:background .12s ease, color .12s ease;
+}
+#lang-switch-btn:hover,
+#lang-switch-btn:focus{
+  background:rgba(177,13,13,0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  #lang-switch-btn:hover,
+  #lang-switch-btn:focus{
+    background:rgba(255,107,107,0.15);
+  }
+}
+
 /* Mobile nav toggle */
 #nav-toggle{
   display:none;

@@ -1,0 +1,16 @@
+nav:
+  home: "Home"
+  team: "Our Team"
+  blog: "Blog"
+  impressum: "Imprint"
+  datenschutz: "Privacy"
+
+cookie:
+  message: "We use cookies to improve the site. By clicking \"Accept\" you agree to analytics cookies."
+  accept: "Accept"
+  decline: "Decline"
+  privacy_link: "Privacy"
+
+language_switch: "Language"
+en: "English"
+de: "Deutsch"
