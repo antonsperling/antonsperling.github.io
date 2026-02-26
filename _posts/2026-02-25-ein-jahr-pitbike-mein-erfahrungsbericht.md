@@ -371,6 +371,11 @@ geeignet. Ich habe das mit gedruckt und bin bis heute zufrieden.
 ![3D CAD](/assets/images/pitbike-06.jpg)
 ![TPU-Teil](/assets/images/pitbike-05.jpg)
 
+~~~
+Update 02/2026: Ich habe gesehen, dass es bei Schnurri-Racing auch einen Lenkanschlag gibt.
+Der sieht deutlich professioneller und stabiler aus als mein Prototyp
+~~~
+
 Während eines langen Winters kann man ja auch nicht nur fahren. Und
 nachdem ich bei einer Veranstaltung war, bei welcher noch zwei andere Bikes komplett identisch zu meinem aussahen,
 also mit den Originalen Aufklebern, musste die nächste Bastelaktion
