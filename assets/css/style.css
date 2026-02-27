@@ -83,6 +83,7 @@ body{
 #main-nav a:hover,
 #main-nav a:focus{
   background:#f6f6f6;
+  color:var(--accent);
   outline:none;
 }
 
@@ -90,6 +91,7 @@ body{
   #main-nav a:hover,
   #main-nav a:focus{
     background:#333;
+    color:var(--accent);
   }
 }
 
@@ -126,6 +128,17 @@ body{
 #nav-toggle:focus{ outline:2px solid rgba(177,13,13,0.15); border-radius:6px; }
 
 @media (prefers-color-scheme: dark) {
+  #nav-toggle{
+    color:var(--bg);
+    background:var(--accent);
+    border:1px solid var(--accent);
+    border-radius:6px;
+    box-shadow:0 1px 2px rgba(0,0,0,0.25);
+  }
+  #nav-toggle:hover{
+    background:var(--accent);
+    border-color:var(--accent);
+  }
   #nav-toggle:focus{ outline:2px solid rgba(255,107,107,0.25); }
 }
 
