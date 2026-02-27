@@ -230,6 +230,7 @@ footer{ font-size:0.9rem; color:var(--muted); border-top:1px solid var(--border)
   #main-nav{ display:none; position:absolute; right:1rem; top:72px; background:var(--bg); border:1px solid var(--border); box-shadow:0 8px 20px rgba(0,0,0,0.06); padding:0.75rem; border-radius:8px; flex-direction:column; min-width:180px; }
   #main-nav a{ padding:0.6rem 0; }
   .wrap{ padding:0 0.75rem; }
+  .team-photo { width: 140px; }
 }
 
 /* Accessibility: focus outlines */
