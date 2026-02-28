@@ -59,6 +59,10 @@
     if (langDropdown) {
       langDropdown.value = lang;
     }
+
+    // Dispatch custom event for language change
+    var event = new CustomEvent('languageChanged', { detail: { language: lang } });
+    document.dispatchEvent(event);
   }
 
   // Update all translated elements on the page

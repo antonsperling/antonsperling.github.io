@@ -16,6 +16,10 @@ events:
   event: "Événement"
   track: "Trace"
   notes: "Remarques"
+
+team:
+  role: "Rôle"
+
 cookie:
   message: "Nous utilisons des cookies pour améliorer le site. En cliquant sur \"Accepter\", vous acceptez les cookies analytiques."
   accept: "Accepter"

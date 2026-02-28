@@ -18,6 +18,9 @@ events:
   track: "Baan"
   notes: "Opmerkingen"
 
+team:
+  role: "Rol"
+
 cookie:
   message: "We gebruiken cookies om de site te verbeteren. Door op \"Accepteren\" te klikken, accepteer je analytische cookies."
   accept: "Accepteren"

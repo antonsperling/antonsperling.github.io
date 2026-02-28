@@ -18,6 +18,9 @@ events:
   track: "Track"
   notes: "Notes"
 
+team:
+  role: "Role"
+
 cookie:
   message: "We use cookies to improve the site. By clicking \"Accept\" you agree to analytics cookies."
   accept: "Accept"

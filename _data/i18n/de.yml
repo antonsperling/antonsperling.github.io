@@ -18,6 +18,9 @@ events:
   track: "Strecke"
   notes: "Notizen"
 
+team:
+  role: "Rolle"
+
 cookie:
   message: "Wir verwenden Cookies, um die Seite zu verbessern. Durch Klick auf \"Akzeptieren\" stimmst du Analytics-Cookies zu."
   accept: "Akzeptieren"

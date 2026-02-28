@@ -47,15 +47,23 @@ permalink: /
   
   // Render on page load
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', renderEvents);
+    document.addEventListener('DOMContentLoaded', function() {
+      // Wait for i18n to initialize
+      var waitForI18n = setInterval(function() {
+        if (window.i18n && window.i18n.currentLang) {
+          clearInterval(waitForI18n);
+          renderEvents();
+        }
+      }, 50);
+    });
   } else {
-    renderEvents();
+    if (window.i18n && window.i18n.currentLang) {
+      renderEvents();
+    }
   }
   
-  // Re-render when language changes (hook into i18n)
-  var originalSetLanguage = window.setLanguage;
-  window.setLanguage = function(lang) {
-    originalSetLanguage(lang);
+  // Listen for language changes
+  document.addEventListener('languageChanged', function(e) {
     renderEvents();
-  };
+  });
 </script>

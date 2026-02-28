@@ -18,6 +18,9 @@ events:
   track: "Pist"
   notes: "Notlar"
 
+team:
+  role: "Rol"
+
 cookie:
   message: "Siteyi geliştirmek için çerezleri kullanıyoruz. \"Kabul Et\" e tıklayarak analitik çerezlerini kabul etmiş olursunuz."
   accept: "Kabul Et"

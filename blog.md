@@ -78,15 +78,23 @@ permalink: /blog/
   
   // Render on page load
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', renderBlogPosts);
+    document.addEventListener('DOMContentLoaded', function() {
+      // Wait for i18n to initialize
+      var waitForI18n = setInterval(function() {
+        if (window.i18n && window.i18n.currentLang) {
+          clearInterval(waitForI18n);
+          renderBlogPosts();
+        }
+      }, 50);
+    });
   } else {
-    renderBlogPosts();
+    if (window.i18n && window.i18n.currentLang) {
+      renderBlogPosts();
+    }
   }
   
-  // Re-render when language changes
-  var originalSetLanguage = window.setLanguage;
-  window.setLanguage = function(lang) {
-    originalSetLanguage(lang);
+  // Listen for language changes
+  document.addEventListener('languageChanged', function(e) {
     renderBlogPosts();
-  };
+  });
 </script>

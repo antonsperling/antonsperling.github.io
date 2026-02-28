@@ -18,6 +18,9 @@ events:
   track: "Pista"
   notes: "Note"
 
+team:
+  role: "Ruolo"
+
 cookie:
   message: "Utilizziamo i cookie per migliorare il sito. Facendo clic su \"Accetta\" accetti i cookie analitici."
   accept: "Accetta"
