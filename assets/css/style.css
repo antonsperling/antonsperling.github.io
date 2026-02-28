@@ -99,70 +99,118 @@ body{
   color:inherit;
   text-decoration:none;
   padding:8px 14px;
-  border-radius:8px;
+  border-radius:10px;
+  border:1px solid transparent;
   font-weight:500;
+  position:relative;
   transition:all 0.2s ease;
 }
 
-/* Light mode: hover */
+/* Hover: light theme (soft blue capsule) */
 #main-nav a:hover,
 #main-nav a:focus{
-  background:var(--accent-light);
-  color:var(--accent);
+  background:#e3f2fd;
+  color:#222;
+  border-color:#9ecffb;
+  border-radius:999px;
+  transform:translateY(-1px);
+  box-shadow:0 6px 16px rgba(0,0,0,0.08);
   outline:none;
 }
 
-/* Light mode: active */
+/* Active: light theme (dark tag) */
 #main-nav a[aria-current="page"]{
-  background:var(--accent-light);
-  color:var(--accent);
+  background:linear-gradient(135deg, #222 0%, #555 100%);
+  color:#fff;
+  border-color:#000;
   font-weight:700;
-  box-shadow:0 2px 8px rgba(177, 13, 13, 0.15);
+  border-radius:12px 4px 12px 4px;
+  transform:none;
+  box-shadow:0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* Accent marker for active item */
+#main-nav a[aria-current="page"]::after{
+  content:'';
+  position:absolute;
+  left:8px;
+  right:8px;
+  bottom:-4px;
+  height:3px;
+  border-radius:2px;
+  background:var(--accent);
 }
 
 @media (prefers-color-scheme: dark) {
-  /* Dark mode: hover */
+  /* Hover: dark theme (light blue glow) */
   #main-nav a:hover,
   #main-nav a:focus{
-    background:rgba(255, 204, 0, 0.12);
-    color:var(--accent);
+    background:rgba(74, 158, 255, 0.18);
+    color:#fff;
+    border-color:rgba(74, 158, 255, 0.5);
+    border-radius:999px;
+    box-shadow:0 0 0 1px rgba(74, 158, 255, 0.25), 0 8px 18px rgba(0,0,0,0.35);
   }
 
-  /* Dark mode: active */
+  /* Active: dark theme (yellow badge) */
   #main-nav a[aria-current="page"]{
     background:#ffdd33;
     color:#000;
+    border-color:#ffd000;
     font-weight:700;
-    box-shadow:0 2px 12px rgba(255, 221, 51, 0.3);
+    border-radius:12px 4px 12px 4px;
+    box-shadow:0 10px 20px rgba(255, 221, 51, 0.32);
+  }
+
+  #main-nav a[aria-current="page"]::after{
+    background:#fff;
   }
 }
 
 /* Manual light theme override */
 html[data-theme="light"] #main-nav a:hover,
 html[data-theme="light"] #main-nav a:focus{
-  background:var(--accent-light);
-  color:var(--accent);
+  background:#e3f2fd;
+  color:#222;
+  border-color:#9ecffb;
+  border-radius:999px;
+  box-shadow:0 6px 16px rgba(0,0,0,0.08);
 }
 
 html[data-theme="light"] #main-nav a[aria-current="page"]{
-  background:var(--accent-light);
-  color:var(--accent);
+  background:linear-gradient(135deg, #222 0%, #555 100%);
+  color:#fff;
+  border-color:#000;
   font-weight:700;
-  box-shadow:0 2px 8px rgba(177, 13, 13, 0.15);
+  border-radius:12px 4px 12px 4px;
+  box-shadow:0 8px 18px rgba(0,0,0,0.2);
+}
+
+html[data-theme="light"] #main-nav a[aria-current="page"]::after{
+  background:var(--accent);
 }
 
 /* Manual dark theme override */
 html[data-theme="dark"] #main-nav a:hover,
 html[data-theme="dark"] #main-nav a:focus{
-  background:rgba(255, 204, 0, 0.12);
-  color:var(--accent);
+  background:rgba(74, 158, 255, 0.18);
+  color:#fff;
+  border-color:rgba(74, 158, 255, 0.5);
+  border-radius:999px;
+  box-shadow:0 0 0 1px rgba(74, 158, 255, 0.25), 0 8px 18px rgba(0,0,0,0.35);
 }
 
 html[data-theme="dark"] #main-nav a[aria-current="page"]{
   background:#ffdd33;
   color:#000;
+  border-color:#ffd000;
   font-weight:700;
-  box-shadow:0 2px 12px rgba(255, 221, 51, 0.3);
+  border-radius:12px 4px 12px 4px;
+  box-shadow:0 10px 20px rgba(255, 221, 51, 0.32);
+}
+
+html[data-theme="dark"] #main-nav a[aria-current="page"]::after{
+  background:#fff;
 }
 
 #lang-switch-btn{
