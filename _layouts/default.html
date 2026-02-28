@@ -155,6 +155,19 @@
       (function(){
         var nav = document.getElementById('main-nav');
         var btn = document.getElementById('nav-toggle');
+        
+        function closeMenu() {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.style.display = 'none';
+        }
+        
+        function openMenu() {
+          btn.setAttribute('aria-expanded', 'true');
+          nav.style.display = 'flex';
+          nav.style.flexDirection = 'column';
+          nav.style.rowGap = '0.5rem';
+        }
+        
         function updateNavDisplay() {
           if (window.matchMedia('(max-width:700px)').matches) {
             btn.style.display = 'inline-block';
@@ -164,21 +177,33 @@
             nav.style.display = 'flex';
           }
         }
+        
         updateNavDisplay();
         window.addEventListener('resize', updateNavDisplay);
+        
         if (btn) {
-          btn.addEventListener('click', function () {
+          btn.addEventListener('click', function (e) {
+            e.stopPropagation();
             var expanded = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', !expanded);
-            if (nav.style.display === 'none') {
-              nav.style.display = 'flex';
-              nav.style.flexDirection = 'column';
-              nav.style.rowGap = '0.5rem';
+            if (expanded) {
+              closeMenu();
             } else {
-              nav.style.display = 'none';
+              openMenu();
             }
           });
         }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function (e) {
+          var isClickInsideNav = nav && nav.contains(e.target);
+          var isClickOnButton = btn && btn.contains(e.target);
+          var isMobileView = window.matchMedia('(max-width:700px)').matches;
+          var menuIsOpen = btn && btn.getAttribute('aria-expanded') === 'true';
+          
+          if (isMobileView && menuIsOpen && !isClickInsideNav && !isClickOnButton) {
+            closeMenu();
+          }
+        });
       })();
     </script>
 
