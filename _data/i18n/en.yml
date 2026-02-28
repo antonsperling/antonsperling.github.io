@@ -11,6 +11,13 @@ blog:
   no_posts: "No posts found."
   read_more: "Read more →"
 
+events:
+  title: "Here you can find our upcoming track days:"
+  date: "Date"
+  event: "Event"
+  track: "Track"
+  notes: "Notes"
+
 cookie:
   message: "We use cookies to improve the site. By clicking \"Accept\" you agree to analytics cookies."
   accept: "Accept"

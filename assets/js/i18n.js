@@ -12,6 +12,16 @@
       tr: 'Türkçe',
       ru: 'Русский',
       uk: 'Українська'
+    },
+    langFlags: {
+      en: '🇬🇧',
+      de: '🇩🇪',
+      it: '🇮🇹',
+      nl: '🇳🇱',
+      fr: '🇫🇷',
+      tr: '🇹🇷',
+      ru: '🇷🇺',
+      uk: '🇺🇦'
     }
   };
 
@@ -44,12 +54,10 @@
     // Update all elements with data-i18n attributes
     updatePageTranslations();
 
-    // Update language switcher button
-    var langBtn = document.getElementById('lang-switch-btn');
-    if (langBtn) {
-      var nextLangIdx = (window.i18n.availableLangs.indexOf(lang) + 1) % window.i18n.availableLangs.length;
-      var nextLang = window.i18n.availableLangs[nextLangIdx];
-      langBtn.textContent = window.i18n.langNames[nextLang];
+    // Update dropdown if it exists
+    var langDropdown = document.getElementById('lang-switch-dropdown');
+    if (langDropdown) {
+      langDropdown.value = lang;
     }
   }
 
@@ -111,23 +119,51 @@
   }
 
   // Initialize on page load
-  // Initialize on page load
   window.addEventListener('DOMContentLoaded', function () {
     var preferredLang = getPreferredLanguage();
     setLanguage(preferredLang);
 
-    // Set up language switcher button
-    var langBtn = document.getElementById('lang-switch-btn');
-    if (langBtn) {
-      langBtn.addEventListener('click', function () {
-        var currentIdx = window.i18n.availableLangs.indexOf(window.i18n.currentLang);
-        var nextIdx = (currentIdx + 1) % window.i18n.availableLangs.length;
-        var nextLang = window.i18n.availableLangs[nextIdx];
-        setLanguage(nextLang);
+    // Set up language switcher dropdown
+    var langDropdown = document.getElementById('lang-switch-dropdown');
+    if (langDropdown) {
+      // Populate dropdown options
+      window.i18n.availableLangs.forEach(function(lang) {
+        var option = document.createElement('option');
+        option.value = lang;
+        option.textContent = window.i18n.langFlags[lang] + ' ' + window.i18n.langNames[lang];
+        langDropdown.appendChild(option);
+      });
+      
+      // Set current language
+      langDropdown.value = preferredLang;
+      
+      // Add change event listener
+      langDropdown.addEventListener('change', function () {
+        setLanguage(this.value);
       });
     }
   });
 
   // Expose setLanguage for external use
   window.setLanguage = setLanguage;
+  
+  // Expose getTranslation for external use
+  window.getTranslation = getTranslation;
+
+  // Helper function to get translation for an object with language keys
+  window.getLocalizedValue = function(obj, lang) {
+    if (typeof obj === 'string') return obj;
+    if (typeof obj === 'object' && obj !== null) {
+      return obj[lang] || obj['en'] || null;
+    }
+    return null;
+  };
+
+  // Helper function to filter blog posts by current language
+  window.filterPostsByLanguage = function(posts, lang) {
+    if (!posts) return [];
+    return posts.filter(function(post) {
+      return post.lang === lang;
+    });
+  };
 })();

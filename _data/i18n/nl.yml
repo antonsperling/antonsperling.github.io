@@ -11,6 +11,13 @@ blog:
   no_posts: "Geen posts gevonden."
   read_more: "Lees meer →"
 
+events:
+  title: "Hier vind je onze komende trackdays:"
+  date: "Datum"
+  event: "Evenement"
+  track: "Baan"
+  notes: "Opmerkingen"
+
 cookie:
   message: "We gebruiken cookies om de site te verbeteren. Door op \"Accepteren\" te klikken, accepteer je analytische cookies."
   accept: "Accepteren"

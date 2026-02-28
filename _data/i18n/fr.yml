@@ -10,7 +10,12 @@ blog:
   description: "Tous les articles du blog du Full Trottel Racing Team."
   no_posts: "Aucun article trouvé."
   read_more: "Lire la suite →"
-
+events:
+  title: "Voici nos prochains jours de piste:"
+  date: "Date"
+  event: "Événement"
+  track: "Trace"
+  notes: "Remarques"
 cookie:
   message: "Nous utilisons des cookies pour améliorer le site. En cliquant sur \"Accepter\", vous acceptez les cookies analytiques."
   accept: "Accepter"

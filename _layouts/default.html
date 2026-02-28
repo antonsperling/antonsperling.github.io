@@ -90,7 +90,7 @@
           <a href="{{ '/impressum/' | relative_url }}" data-i18n="nav.impressum">Impressum</a>
           <a href="{{ '/datenschutz/' | relative_url }}" data-i18n="nav.datenschutz">Datenschutz</a>
           <button id="theme-toggle" type="button" title="Toggle dark/light theme">🌙</button>
-          <button id="lang-switch-btn" type="button" style="background:transparent;border:1px solid var(--border);padding:6px 12px;border-radius:4px;cursor:pointer;font-weight:500;font-size:0.9rem;color:inherit;">Deutsch</button>
+          <select id="lang-switch-dropdown" style="background:var(--bg);color:var(--text);border:1px solid var(--border);padding:6px 12px;border-radius:4px;cursor:pointer;font-weight:500;font-size:0.9rem;"></select>
         </nav>
       </div>
     </header>
@@ -109,8 +109,8 @@
           &copy; {{ site.time | date: "%Y" }} {{ site.title | default: "Full Trottel Racing" }}.
         </div>
         <div style="font-size:0.9rem;">
-          <a href="{{ '/impressum/' | relative_url }}" style="margin-right:0.5rem;">Impressum</a>
-          <a href="{{ '/datenschutz/' | relative_url }}">Datenschutz</a>
+          <a href="{{ '/impressum/' | relative_url }}" data-i18n="nav.impressum" style="margin-right:0.5rem;">Impressum</a>
+          <a href="{{ '/datenschutz/' | relative_url }}" data-i18n="nav.datenschutz">Datenschutz</a>
         </div>
       </div>
     </footer>

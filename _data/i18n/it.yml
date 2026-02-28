@@ -11,6 +11,13 @@ blog:
   no_posts: "Nessun post trovato."
   read_more: "Leggi di più →"
 
+events:
+  title: "Ecco i nostri prossimi day di pista:"
+  date: "Data"
+  event: "Evento"
+  track: "Pista"
+  notes: "Note"
+
 cookie:
   message: "Utilizziamo i cookie per migliorare il sito. Facendo clic su \"Accetta\" accetti i cookie analitici."
   accept: "Accetta"

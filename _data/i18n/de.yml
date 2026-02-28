@@ -11,6 +11,13 @@ blog:
   no_posts: "Keine Beiträge gefunden."
   read_more: "Weiterlesen →"
 
+events:
+  title: "Hier findest du unsere kommenden Trackdays:"
+  date: "Datum"
+  event: "Event"
+  track: "Strecke"
+  notes: "Notizen"
+
 cookie:
   message: "Wir verwenden Cookies, um die Seite zu verbessern. Durch Klick auf \"Akzeptieren\" stimmst du Analytics-Cookies zu."
   accept: "Akzeptieren"

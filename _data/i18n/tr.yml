@@ -11,6 +11,13 @@ blog:
   no_posts: "Hiçbir gönderi bulunamadı."
   read_more: "Daha fazla oku →"
 
+events:
+  title: "Yaklaşan pist günlerimizi burada bulabilirsiniz:"
+  date: "Tarih"
+  event: "Etkinlik"
+  track: "Pist"
+  notes: "Notlar"
+
 cookie:
   message: "Siteyi geliştirmek için çerezleri kullanıyoruz. \"Kabul Et\" e tıklayarak analitik çerezlerini kabul etmiş olursunuz."
   accept: "Kabul Et"
