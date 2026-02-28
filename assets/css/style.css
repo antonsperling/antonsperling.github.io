@@ -189,6 +189,23 @@ html[data-theme="dark"] #nav-toggle:focus {
   outline:2px solid rgba(255,255,255,0.3);
 }
 
+html[data-theme="light"] #nav-toggle {
+  color:#000;
+  background:#333;
+  border:1px solid #222;
+  border-radius:6px;
+  transition:all .2s ease;
+}
+
+html[data-theme="light"] #nav-toggle:hover {
+  background:#444;
+  border-color:#333;
+}
+
+html[data-theme="light"] #nav-toggle:focus {
+  outline:2px solid rgba(0,0,0,0.2);
+}
+
 /* Theme toggle button */
 #theme-toggle{
   background:transparent;
