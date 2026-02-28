@@ -83,6 +83,7 @@
           <a href="{{ '/blog/' | relative_url }}" data-i18n="nav.blog">Blog</a>
           <a href="{{ '/impressum/' | relative_url }}" data-i18n="nav.impressum">Impressum</a>
           <a href="{{ '/datenschutz/' | relative_url }}" data-i18n="nav.datenschutz">Datenschutz</a>
+          <button id="theme-toggle" type="button" title="Toggle dark/light theme">🌙</button>
           <button id="lang-switch-btn" type="button" style="background:transparent;border:1px solid var(--border);padding:6px 12px;border-radius:4px;cursor:pointer;font-weight:500;font-size:0.9rem;color:inherit;">Deutsch</button>
         </nav>
       </div>
@@ -108,6 +109,41 @@
       </div>
     </footer>
 
+    <script>
+      // Theme toggle
+      (function(){
+        var themeToggle = document.getElementById('theme-toggle');
+        var html = document.documentElement;
+        
+        // Load saved preference or detect system preference
+        function initTheme() {
+          var saved = localStorage.getItem('theme-preference');
+          if (saved) {
+            html.setAttribute('data-theme', saved);
+            updateThemeButton(saved);
+          } else {
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            html.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+            updateThemeButton(prefersDark ? 'dark' : 'light');
+          }
+        }
+        
+        function updateThemeButton(theme) {
+          themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+          themeToggle.title = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+        }
+        
+        themeToggle.addEventListener('click', function() {
+          var currentTheme = html.getAttribute('data-theme');
+          var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          html.setAttribute('data-theme', newTheme);
+          localStorage.setItem('theme-preference', newTheme);
+          updateThemeButton(newTheme);
+        });
+        
+        initTheme();
+      })();
+    </script>
     <script>
       // Mobile nav toggle
       (function(){
