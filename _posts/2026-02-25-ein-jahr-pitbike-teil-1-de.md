@@ -5,7 +5,7 @@ date: 2026-02-25
 author: "the captain"
 categories: ["blog"]
 lang: "de"
-excerpt: "Ein Erfahrungsbericht mit Tipps und Steckenbeschreibungen"
+excerpt: "Teil 1: Ein Erfahrungsbericht mit Tipps und Steckenbeschreibungen"
 ---
 
 das wird hier meine Geschichte zu meinem Pitbike Werdegang. Gespickt mit

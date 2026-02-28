@@ -5,7 +5,7 @@ date: 2026-02-25
 author: "the captain"
 categories: ["blog"]
 lang: "de"
-excerpt: "Ein Erfahrungsbericht mit Tipps und Steckenbeschreibungen"
+excerpt: "Teil 2: Neue Strecken und Updates am Bike"
 ---
 
 ## Kapitel VI: Upgrades und Zubehör (November 2024)

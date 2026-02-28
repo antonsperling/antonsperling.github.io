@@ -5,7 +5,7 @@ date: 2026-02-25
 author: "the captain"
 categories: ["blog"]
 lang: "en"
-excerpt: "An experience report with tips and track descriptions"
+excerpt: "Part 1: An experience report with tips and track descriptions"
 ---
 
 this will be my story of my pitbike journey. Loaded with ride reports, experiences, tips and tricks, as well as my very personal recommendations.

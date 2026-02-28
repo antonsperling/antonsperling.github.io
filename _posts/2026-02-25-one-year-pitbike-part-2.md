@@ -5,7 +5,7 @@ date: 2026-02-25
 author: "the captain"
 categories: ["blog"]
 lang: "en"
-excerpt: "An experience report with tips and track descriptions"
+excerpt: "Part 2: New tracks and updates to the bike"
 ---
 
 ## Chapter VI: Upgrades and Accessories (November 2024)
