@@ -141,43 +141,48 @@ body{
 /* Mobile nav toggle */
 #nav-toggle{
   display:none;
-  background:transparent;
-  border:0;
+  background:#333;
+  border:1px solid #222;
+  color:#000;
   font-size:20px;
   line-height:1;
   padding:6px;
   cursor:pointer;
+  border-radius:6px;
+  transition:all .2s ease;
 }
-#nav-toggle:focus{ outline:2px solid rgba(177,13,13,0.15); border-radius:6px; }
+#nav-toggle:hover{
+  background:#444;
+  border-color:#333;
+}
+#nav-toggle:focus{ outline:2px solid rgba(0,0,0,0.2); border-radius:6px; }
 
 @media (prefers-color-scheme: dark) {
   #nav-toggle{
     color:#fff;
-    background:rgba(255,255,255,0.1);
-    border:1px solid rgba(255,255,255,0.2);
+    background:#f0f0f0;
+    border:1px solid #ddd;
     border-radius:6px;
-    font-weight:bold;
     transition:all .2s ease;
   }
   #nav-toggle:hover{
-    background:rgba(255,255,255,0.15);
-    border-color:rgba(255,255,255,0.3);
+    background:#fff;
+    border-color:#ccc;
   }
   #nav-toggle:focus{ outline:2px solid rgba(255,255,255,0.3); }
 }
 
 html[data-theme="dark"] #nav-toggle {
   color:#fff;
-  background:rgba(255,255,255,0.1);
-  border:1px solid rgba(255,255,255,0.2);
+  background:#f0f0f0;
+  border:1px solid #ddd;
   border-radius:6px;
-  font-weight:bold;
   transition:all .2s ease;
 }
 
 html[data-theme="dark"] #nav-toggle:hover {
-  background:rgba(255,255,255,0.15);
-  border-color:rgba(255,255,255,0.3);
+  background:#fff;
+  border-color:#ccc;
 }
 
 html[data-theme="dark"] #nav-toggle:focus {
