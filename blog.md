@@ -4,12 +4,12 @@ title: "Blog"
 permalink: /blog/
 ---
 
-# Blog
+# <span data-i18n="blog.title">Blog</span>
 
-Hier findest du alle Blog-Posts des Full Trottel Racing Teams.
+<p data-i18n="blog.description">All blog posts from the Full Trottel Racing Team.</p>
 
 {% if site.posts == empty %}
-Keine Beiträge gefunden.
+<p data-i18n="blog.no_posts">No posts found.</p>
 {% else %}
 <ul class="blog-list">
   {% for post in site.posts %}
@@ -17,7 +17,7 @@ Keine Beiträge gefunden.
     <h2 style="margin:0 0 0.25rem;">
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </h2>
-    <div style="color:#666;font-size:0.9rem;margin-bottom:0.5rem;">
+    <div style="color:var(--muted);font-size:0.9rem;margin-bottom:0.5rem;">
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d. %B %Y" }}</time>
       {% if post.author %} — {{ post.author }}{% endif %}
       {% if post.categories %} — {% for c in post.categories %}{{ c }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}
@@ -29,7 +29,7 @@ Keine Beiträge gefunden.
         {{ post.content | strip_html | truncate: 300 }}
       {% endif %}
     </div>
-    <a href="{{ post.url | relative_url }}">Weiterlesen →</a>
+    <a href="{{ post.url | relative_url }}"><span data-i18n="blog.read_more">Read more →</span></a>
   </li>
   {% endfor %}
 </ul>

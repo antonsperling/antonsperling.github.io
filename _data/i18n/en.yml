@@ -5,6 +5,12 @@ nav:
   impressum: "Imprint"
   datenschutz: "Privacy"
 
+blog:
+  title: "Blog"
+  description: "All blog posts from the Full Trottel Racing Team."
+  no_posts: "No posts found."
+  read_more: "Read more →"
+
 cookie:
   message: "We use cookies to improve the site. By clicking \"Accept\" you agree to analytics cookies."
   accept: "Accept"
@@ -14,3 +20,9 @@ cookie:
 language_switch: "Language"
 en: "English"
 de: "Deutsch"
+it: "Italiano"
+nl: "Nederlands"
+fr: "Français"
+tr: "Türkçe"
+ru: "Русский"
+uk: "Українська"

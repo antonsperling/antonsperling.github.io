@@ -1,0 +1,28 @@
+nav:
+  home: "Accueil"
+  team: "Notre Équipe"
+  blog: "Blog"
+  impressum: "Mentions Légales"
+  datenschutz: "Confidentialité"
+
+blog:
+  title: "Blog"
+  description: "Tous les articles du blog du Full Trottel Racing Team."
+  no_posts: "Aucun article trouvé."
+  read_more: "Lire la suite →"
+
+cookie:
+  message: "Nous utilisons des cookies pour améliorer le site. En cliquant sur \"Accepter\", vous acceptez les cookies analytiques."
+  accept: "Accepter"
+  decline: "Refuser"
+  privacy_link: "Confidentialité"
+
+language_switch: "Langue"
+en: "English"
+de: "Deutsch"
+it: "Italiano"
+nl: "Nederlands"
+fr: "Français"
+tr: "Türkçe"
+ru: "Русский"
+uk: "Українська"

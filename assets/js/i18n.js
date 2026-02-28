@@ -1,21 +1,33 @@
 // Internationalization (i18n) support
 (function () {
   window.i18n = {
-    currentLang: 'en'
+    currentLang: 'en',
+    availableLangs: ['en', 'de', 'it', 'nl', 'fr', 'tr', 'ru', 'uk'],
+    langNames: {
+      en: 'English',
+      de: 'Deutsch',
+      it: 'Italiano',
+      nl: 'Nederlands',
+      fr: 'Français',
+      tr: 'Türkçe',
+      ru: 'Русский',
+      uk: 'Українська'
+    }
   };
 
   // Get user's preferred language (from localStorage, browser, or default to 'en')
   function getPreferredLanguage() {
     // Check localStorage first
     var stored = localStorage.getItem('site_language');
-    if (stored && (stored === 'de' || stored === 'en')) {
+    if (stored && window.i18n.availableLangs.indexOf(stored) !== -1) {
       return stored;
     }
 
     // Check browser language
     var browserLang = navigator.language || navigator.userLanguage;
-    if (browserLang && browserLang.substring(0, 2) === 'de') {
-      return 'de';
+    var browserLangCode = browserLang.substring(0, 2);
+    if (browserLangCode && window.i18n.availableLangs.indexOf(browserLangCode) !== -1) {
+      return browserLangCode;
     }
 
     // Default to English
@@ -24,7 +36,7 @@
 
   // Set language and update page
   function setLanguage(lang) {
-    if (lang !== 'de' && lang !== 'en') return;
+    if (window.i18n.availableLangs.indexOf(lang) === -1) return;
 
     window.i18n.currentLang = lang;
     localStorage.setItem('site_language', lang);
@@ -35,7 +47,9 @@
     // Update language switcher button
     var langBtn = document.getElementById('lang-switch-btn');
     if (langBtn) {
-      langBtn.textContent = lang === 'en' ? 'Deutsch' : 'English';
+      var nextLangIdx = (window.i18n.availableLangs.indexOf(lang) + 1) % window.i18n.availableLangs.length;
+      var nextLang = window.i18n.availableLangs[nextLangIdx];
+      langBtn.textContent = window.i18n.langNames[nextLang];
     }
   }
 
@@ -97,6 +111,7 @@
   }
 
   // Initialize on page load
+  // Initialize on page load
   window.addEventListener('DOMContentLoaded', function () {
     var preferredLang = getPreferredLanguage();
     setLanguage(preferredLang);
@@ -105,8 +120,10 @@
     var langBtn = document.getElementById('lang-switch-btn');
     if (langBtn) {
       langBtn.addEventListener('click', function () {
-        var newLang = window.i18n.currentLang === 'en' ? 'de' : 'en';
-        setLanguage(newLang);
+        var currentIdx = window.i18n.availableLangs.indexOf(window.i18n.currentLang);
+        var nextIdx = (currentIdx + 1) % window.i18n.availableLangs.length;
+        var nextLang = window.i18n.availableLangs[nextIdx];
+        setLanguage(nextLang);
       });
     }
   });

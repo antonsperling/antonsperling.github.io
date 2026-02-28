@@ -1,0 +1,28 @@
+nav:
+  home: "Главная"
+  team: "Наша Команда"
+  blog: "Блог"
+  impressum: "Правовая информация"
+  datenschutz: "Конфиденциальность"
+
+blog:
+  title: "Блог"
+  description: "Все статьи блога команды Full Trottel Racing."
+  no_posts: "Посты не найдены."
+  read_more: "Читать далее →"
+
+cookie:
+  message: "Мы используем файлы cookie для улучшения сайта. Нажав «Принять», вы соглашаетесь с аналитическими файлами cookie."
+  accept: "Принять"
+  decline: "Отклонить"
+  privacy_link: "Конфиденциальность"
+
+language_switch: "Язык"
+en: "English"
+de: "Deutsch"
+it: "Italiano"
+nl: "Nederlands"
+fr: "Français"
+tr: "Türkçe"
+ru: "Русский"
+uk: "Українська"

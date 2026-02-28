@@ -1,0 +1,28 @@
+nav:
+  home: "Ana Sayfa"
+  team: "Takımımız"
+  blog: "Blog"
+  impressum: "Yasal Uyarı"
+  datenschutz: "Gizlilik"
+
+blog:
+  title: "Blog"
+  description: "Full Trottel Racing Takımının tüm blog gönderileri."
+  no_posts: "Hiçbir gönderi bulunamadı."
+  read_more: "Daha fazla oku →"
+
+cookie:
+  message: "Siteyi geliştirmek için çerezleri kullanıyoruz. \"Kabul Et\" e tıklayarak analitik çerezlerini kabul etmiş olursunuz."
+  accept: "Kabul Et"
+  decline: "Reddet"
+  privacy_link: "Gizlilik"
+
+language_switch: "Dil"
+en: "English"
+de: "Deutsch"
+it: "Italiano"
+nl: "Nederlands"
+fr: "Français"
+tr: "Türkçe"
+ru: "Русский"
+uk: "Українська"
