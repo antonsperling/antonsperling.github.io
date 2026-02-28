@@ -152,40 +152,36 @@ body{
 
 @media (prefers-color-scheme: dark) {
   #nav-toggle{
-    color:#000;
-    background:#ffcc00;
-    border:2px solid #ffaa00;
+    color:#fff;
+    background:rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.2);
     border-radius:6px;
-    box-shadow:0 0 8px rgba(255,204,0,0.6), 0 2px 4px rgba(0,0,0,0.3);
     font-weight:bold;
     transition:all .2s ease;
   }
   #nav-toggle:hover{
-    background:#ffdd33;
-    border-color:#ffbb00;
-    box-shadow:0 0 12px rgba(255,204,0,0.8), 0 2px 6px rgba(0,0,0,0.3);
+    background:rgba(255,255,255,0.15);
+    border-color:rgba(255,255,255,0.3);
   }
-  #nav-toggle:focus{ outline:2px solid rgba(255,204,0,0.5); }
+  #nav-toggle:focus{ outline:2px solid rgba(255,255,255,0.3); }
 }
 
 html[data-theme="dark"] #nav-toggle {
-  color:#000;
-  background:#ffcc00;
-  border:2px solid #ffaa00;
+  color:#fff;
+  background:rgba(255,255,255,0.1);
+  border:1px solid rgba(255,255,255,0.2);
   border-radius:6px;
-  box-shadow:0 0 8px rgba(255,204,0,0.6), 0 2px 4px rgba(0,0,0,0.3);
   font-weight:bold;
   transition:all .2s ease;
 }
 
 html[data-theme="dark"] #nav-toggle:hover {
-  background:#ffdd33;
-  border-color:#ffbb00;
-  box-shadow:0 0 12px rgba(255,204,0,0.8), 0 2px 6px rgba(0,0,0,0.3);
+  background:rgba(255,255,255,0.15);
+  border-color:rgba(255,255,255,0.3);
 }
 
 html[data-theme="dark"] #nav-toggle:focus {
-  outline:2px solid rgba(255,204,0,0.5);
+  outline:2px solid rgba(255,255,255,0.3);
 }
 
 /* Theme toggle button */
