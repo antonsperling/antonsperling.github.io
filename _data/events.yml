@@ -17,6 +17,7 @@
     tr: "Assen TT Devresi"
     ru: "Трасса Ассен ТТ"
     uk: "Траса Ассен ТТ"
+  track_image: "assen.svg"
   notes:
     en: "Start the season with a bang at the iconic Assen TT Circuit"
     de: "Saison mit Paukenschlag auf der legendären Assen TT Circuit starten"
@@ -46,6 +47,7 @@
     tr: "Spa Frankorşam"
     ru: "Спа-Франкоршам"
     uk: "Спа-Франкоршам"
+  track_image: "spa-francorchamps.svg"
   notes:
     en: "This time we will master au rouge and the bus stop chicane"
     de: "Dieses Mal werden wir au rouge und die Bus-Stop-Schikane meistern"
