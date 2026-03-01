@@ -87,8 +87,6 @@
           <a href="{{ '/' | relative_url }}" data-i18n="nav.home" {% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}>Start</a>
           <a href="{{ '/our-team/' | relative_url }}" data-i18n="nav.team" {% if page.url == '/our-team/' %}aria-current="page"{% endif %}>Our Team</a>
           <a href="{{ '/blog/' | relative_url }}" data-i18n="nav.blog" {% if page.url == '/blog/' or page.url contains '/blog/' or page.collection == 'posts' or page.layout == 'post' %}aria-current="page"{% endif %}>Blog</a>
-          <a href="{{ '/impressum/' | relative_url }}" data-i18n="nav.impressum" {% if page.url == '/impressum/' %}aria-current="page"{% endif %}>Impressum</a>
-          <a href="{{ '/datenschutz/' | relative_url }}" data-i18n="nav.datenschutz" {% if page.url == '/datenschutz/' %}aria-current="page"{% endif %}>Datenschutz</a>
           <button id="theme-toggle" type="button" title="Toggle dark/light theme">🌙</button>
           <select id="lang-switch-dropdown" style="background:var(--bg);color:var(--text);border:1px solid var(--border);padding:6px 12px;border-radius:4px;cursor:pointer;font-weight:500;font-size:0.9rem;"></select>
         </nav>

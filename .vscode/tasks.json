@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Jekyll: Serve (LiveReload)",
+      "type": "shell",
+      "command": "bundle exec jekyll serve --livereload --host 127.0.0.1",
+      "options": {
+        "cwd": "${workspaceFolder}/antonsperling.github.io"
+      },
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}
