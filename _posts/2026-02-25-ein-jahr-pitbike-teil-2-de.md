@@ -6,6 +6,7 @@ author: "the captain"
 categories: ["blog"]
 lang: "de"
 excerpt: "Teil 2: Neue Strecken und Updates am Bike"
+background_image: "/assets/images/pitbike-07.jpg"
 ---
 
 ## Kapitel VI: Upgrades und Zubehör (November 2024)

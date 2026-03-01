@@ -6,6 +6,7 @@ author: "the captain"
 categories: ["blog"]
 lang: "fr"
 excerpt: "Partie 1 : Un rapport d'expérience avec des conseils et descriptions de circuits"
+background_image: "/assets/images/pitbike-01.jpg"
 ---
 
 ceci sera mon histoire de mon parcours en pitbike. Truffé de rapports de

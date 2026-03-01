@@ -6,6 +6,7 @@ author: "the captain"
 categories: ["blog"]
 lang: "fr"
 excerpt: "Partie 2 : Nouveaux circuits et mises à jour de la moto"
+background_image: "/assets/images/pitbike-07.jpg"
 ---
 
 ## Chapitre VI : Améliorations et Accessoires (Novembre 2024)

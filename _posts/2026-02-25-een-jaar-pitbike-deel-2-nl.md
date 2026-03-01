@@ -6,6 +6,7 @@ author: "the captain"
 categories: ["blog"]
 lang: "nl"
 excerpt: "Deel 2: Nieuwe banen en updates aan de bike"
+background_image: "/assets/images/pitbike-07.jpg"
 ---
 
 ## Hoofdstuk VI: Upgrades en Accessoires (November 2024)

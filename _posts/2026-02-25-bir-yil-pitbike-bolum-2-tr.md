@@ -6,6 +6,7 @@ author: "the captain"
 categories: ["blog"]
 lang: "tr"
 excerpt: "Bölüm 2: Yeni pistler ve motosikletteki güncellemeler"
+background_image: "/assets/images/pitbike-07.jpg"
 ---
 
 ## Bölüm VI: Yükseltmeler ve Aksesuarlar (Kasım 2024)

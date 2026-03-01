@@ -6,6 +6,7 @@ author: "the captain"
 categories: ["blog"]
 lang: "nl"
 excerpt: "Deel 1: Een ervaringsverslag met tips en baanbeschrijvingen"
+background_image: "/assets/images/pitbike-01.jpg"
 ---
 
 dit wordt hier mijn verhaal over mijn pitbike traject. Gespekt met

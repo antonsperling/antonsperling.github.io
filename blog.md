@@ -22,7 +22,8 @@ permalink: /blog/
       author: {{ post.author | jsonify }},
       categories: {{ post.categories | join: ", " | jsonify }},
       excerpt: {{ post.excerpt | strip_html | truncate: 300 | jsonify }},
-      lang: {{ post.lang | jsonify }}
+      lang: {{ post.lang | jsonify }},
+      background_image: {{ post.background_image | jsonify }}
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ];
@@ -44,22 +45,51 @@ permalink: /blog/
     blogList.innerHTML = '';
     filteredPosts.forEach(function(post) {
       var li = document.createElement('li');
-      li.className = 'post-item';
-      li.style.marginBottom = '1.25rem';
+      li.className = 'blog-post-card';
       
+      // Create background overlay if image exists
+      if (post.background_image) {
+        var bgDiv = document.createElement('div');
+        bgDiv.className = 'blog-card-bg';
+        bgDiv.style.backgroundImage = 'url(' + post.background_image + ')';
+        li.appendChild(bgDiv);
+      }
+      
+      // Create content overlay
+      var contentDiv = document.createElement('div');
+      contentDiv.className = 'blog-card-content';
+      
+      var titleEl = document.createElement('h2');
+      titleEl.className = 'blog-card-title';
+      var titleLink = document.createElement('a');
+      titleLink.href = post.url;
+      titleLink.textContent = post.title;
+      titleEl.appendChild(titleLink);
+      
+      var metaDiv = document.createElement('div');
+      metaDiv.className = 'blog-card-meta';
       var authorText = post.author ? ' — ' + post.author : '';
       var categoriesText = post.categories ? ' — ' + post.categories : '';
+      metaDiv.innerHTML = '<time datetime="' + post.date + '">' + post.date + '</time>' + authorText + categoriesText;
       
-      li.innerHTML = 
-        '<h2 style="margin:0 0 0.25rem;"><a href="' + post.url + '">' + post.title + '</a></h2>' +
-        '<div style="color:var(--muted);font-size:0.9rem;margin-bottom:0.5rem;">' +
-          '<time datetime="' + post.date + '">' + post.date + '</time>' +
-          authorText +
-          categoriesText +
-        '</div>' +
-        '<div class="post-excerpt" style="margin-bottom:0.5rem;">' + post.excerpt + '</div>' +
-        '<a href="' + post.url + '"><span data-i18n="blog.read_more">Read more →</span></a>';
+      var excerptDiv = document.createElement('div');
+      excerptDiv.className = 'blog-card-excerpt';
+      excerptDiv.textContent = post.excerpt;
       
+      var readMoreLink = document.createElement('a');
+      readMoreLink.href = post.url;
+      readMoreLink.className = 'blog-card-readmore';
+      var readMoreSpan = document.createElement('span');
+      readMoreSpan.setAttribute('data-i18n', 'blog.read_more');
+      readMoreSpan.textContent = 'Read more →';
+      readMoreLink.appendChild(readMoreSpan);
+      
+      contentDiv.appendChild(titleEl);
+      contentDiv.appendChild(metaDiv);
+      contentDiv.appendChild(excerptDiv);
+      contentDiv.appendChild(readMoreLink);
+      
+      li.appendChild(contentDiv);
       blogList.appendChild(li);
     });
     

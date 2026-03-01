@@ -6,6 +6,7 @@ author: "the captain"
 categories: ["blog"]
 lang: "de"
 excerpt: "Teil 1: Ein Erfahrungsbericht mit Tipps und Steckenbeschreibungen"
+background_image: "/assets/images/pitbike-01.jpg"
 ---
 
 das wird hier meine Geschichte zu meinem Pitbike Werdegang. Gespickt mit

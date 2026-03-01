@@ -6,6 +6,7 @@ author: "the captain"
 categories: ["blog"]
 lang: "ru"
 excerpt: "Часть 1: Отчет о опыте с советами и описаниями трасс"
+background_image: "/assets/images/pitbike-01.jpg"
 ---
 
 это будет моя история о моём путешествии на питбайке. Наполненная

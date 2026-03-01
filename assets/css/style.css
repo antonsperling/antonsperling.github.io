@@ -412,6 +412,37 @@ html[data-theme="dark"] #theme-toggle:focus {
 .team-role { font-weight: 600; color: var(--accent); margin: 0.5rem 0; }
 .team-bio { margin: 0.75rem 0 0 0; font-size: 0.95rem; }
 
+/* Blog post cards */
+.blog-list { list-style: none; padding: 0; margin: 2rem 0; }
+.blog-post-card { position: relative; overflow: hidden; border-radius: 12px; margin-bottom: 2rem; min-height: 300px; display: flex; align-items: center; border: 1px solid var(--border); }
+.blog-card-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0.5; z-index: 0; }
+.blog-card-content { position: relative; z-index: 1; padding: 2rem; width: 100%; background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.4)); }
+.blog-card-title { margin: 0 0 0.5rem 0; font-size: 1.8rem; line-height: 1.2; }
+.blog-card-title a { color: #fff; text-decoration: none; border: none; transition: color 0.2s ease; }
+.blog-card-title a:hover { color: var(--accent); }
+.blog-card-meta { color: rgba(255,255,255,0.8); font-size: 0.9rem; margin-bottom: 1rem; }
+.blog-card-excerpt { color: rgba(255,255,255,0.95); margin-bottom: 1.25rem; line-height: 1.6; font-size: 1rem; }
+.blog-card-readmore { display: inline-block; padding: 0.5rem 1.25rem; background: var(--accent); color: #fff; text-decoration: none; border-radius: 6px; font-weight: 600; transition: all 0.2s ease; }
+.blog-card-readmore:hover { background: var(--link); transform: translateX(4px); }
+
+@media (prefers-color-scheme: dark) {
+  .blog-card-content { background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.6)); }
+}
+
+html[data-theme="dark"] .blog-card-content {
+  background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.6));
+}
+
+@media (min-width: 768px) {
+  .blog-post-card { min-height: 350px; }
+  .blog-card-content { padding: 2.5rem 3rem; }
+  .blog-card-title { font-size: 2.2rem; }
+}
+
+@media (min-width: 1000px) {
+  .blog-post-card { min-height: 380px; }
+}
+
 /* Events (homepage) */
 .events-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin: 1.25rem auto 2rem auto; max-width: 900px; }
 .event-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }

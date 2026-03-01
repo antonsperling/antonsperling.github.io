@@ -6,6 +6,7 @@ author: "the captain"
 categories: ["blog"]
 lang: "ru"
 excerpt: "Часть 2: Новые трассы и обновления байка"
+background_image: "/assets/images/pitbike-07.jpg"
 ---
 
 ## Глава VI: Апгрейды и аксессуары (Ноябрь 2024)

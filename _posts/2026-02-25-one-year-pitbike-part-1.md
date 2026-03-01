@@ -6,6 +6,7 @@ author: "the captain"
 categories: ["blog"]
 lang: "en"
 excerpt: "Part 1: An experience report with tips and track descriptions"
+background_image: "/assets/images/pitbike-01.jpg"
 ---
 
 this will be my story of my pitbike journey. Loaded with ride reports, experiences, tips and tricks, as well as my very personal recommendations.

@@ -6,6 +6,7 @@ author: "the captain"
 categories: ["blog"]
 lang: "tr"
 excerpt: "Bölüm 1: İpuçları ve pist açıklamaları içeren bir deneyim raporu"
+background_image: "/assets/images/pitbike-01.jpg"
 ---
 
 bu benim pitbike yolculuğum hakkındaki hikayelim olacak. Sürüş
