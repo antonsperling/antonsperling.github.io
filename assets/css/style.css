@@ -118,15 +118,16 @@ body{
   outline:none;
 }
 
-/* Active: light theme (dark tag) */
+/* Active: light theme (blue badge) */
 #main-nav a[aria-current="page"]{
-  background:linear-gradient(135deg, #222 0%, #555 100%);
-  color:#fff;
-  border-color:#000;
+  background:transparent;
+  color:var(--link);
+  border-color:var(--link);
+  border:2px solid var(--link);
   font-weight:700;
-  border-radius:12px 4px 12px 4px;
+  border-radius:8px;
   transform:none;
-  box-shadow:0 8px 18px rgba(0,0,0,0.2);
+  box-shadow:none;
 }
 
 /* Accent marker for active item */
@@ -138,7 +139,7 @@ body{
   bottom:-4px;
   height:3px;
   border-radius:2px;
-  background:var(--accent);
+  background:var(--link);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -152,18 +153,19 @@ body{
     box-shadow:0 0 0 1px rgba(74, 158, 255, 0.25), 0 8px 18px rgba(0,0,0,0.35);
   }
 
-  /* Active: dark theme (yellow badge) */
+  /* Active: dark theme (blue badge) */
   #main-nav a[aria-current="page"]{
-    background:#ffdd33;
-    color:#000;
-    border-color:#ffd000;
+    background:transparent;
+    color:var(--link);
+    border-color:var(--link);
+    border:2px solid var(--link);
     font-weight:700;
-    border-radius:12px 4px 12px 4px;
-    box-shadow:0 10px 20px rgba(255, 221, 51, 0.32);
+    border-radius:8px;
+    box-shadow:none;
   }
 
   #main-nav a[aria-current="page"]::after{
-    background:#fff;
+    background:var(--link);
   }
 }
 
@@ -178,16 +180,17 @@ html[data-theme="light"] #main-nav a:focus{
 }
 
 html[data-theme="light"] #main-nav a[aria-current="page"]{
-  background:linear-gradient(135deg, #222 0%, #555 100%);
-  color:#fff;
-  border-color:#000;
+  background:transparent;
+  color:var(--link);
+  border-color:var(--link);
+  border:2px solid var(--link);
   font-weight:700;
-  border-radius:12px 4px 12px 4px;
-  box-shadow:0 8px 18px rgba(0,0,0,0.2);
+  border-radius:8px;
+  box-shadow:none;
 }
 
 html[data-theme="light"] #main-nav a[aria-current="page"]::after{
-  background:var(--accent);
+  background:var(--link);
 }
 
 /* Manual dark theme override */
@@ -201,16 +204,17 @@ html[data-theme="dark"] #main-nav a:focus{
 }
 
 html[data-theme="dark"] #main-nav a[aria-current="page"]{
-  background:#ffdd33;
-  color:#000;
-  border-color:#ffd000;
+  background:transparent;
+  color:var(--link);
+  border-color:var(--link);
+  border:2px solid var(--link);
   font-weight:700;
-  border-radius:12px 4px 12px 4px;
-  box-shadow:0 10px 20px rgba(255, 221, 51, 0.32);
+  border-radius:8px;
+  box-shadow:none;
 }
 
 html[data-theme="dark"] #main-nav a[aria-current="page"]::after{
-  background:#fff;
+  background:var(--link);
 }
 
 #lang-switch-btn{
