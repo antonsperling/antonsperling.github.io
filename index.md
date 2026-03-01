@@ -8,7 +8,7 @@ permalink: /
   <img src="/assets/images/logo.png" alt="Full Trottel Racing Logo" />
 </div>
 
-<p data-i18n="events.title" style="margin-bottom: 1rem;">Hier findest du unsere kommenden Trackdays:</p>
+<p data-i18n="events.title" style="margin-bottom: 1rem; text-align: center;">Hier findest du unsere kommenden Trackdays:</p>
 
 <div class="events-grid" id="events-grid" aria-live="polite">
   <!-- Events will be populated by JavaScript -->
@@ -127,4 +127,36 @@ permalink: /
   document.addEventListener('languageChanged', function(e) {
     renderEvents();
   });
+</script>
+
+<script>
+  // Easter egg: Logo driving animation
+  (function(){
+    var logoImg = document.querySelector('.hero-logo img');
+    if (!logoImg) return;
+    
+    logoImg.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Remove any existing animation classes
+      logoImg.classList.remove('driving-away', 'driving-back');
+      
+      // Trigger reflow to restart animation
+      void logoImg.offsetWidth;
+      
+      // Start driving away
+      logoImg.classList.add('driving-away');
+      
+      // After 1.2s (animation duration) + 0.8s (wait) = 2s total, drive back
+      setTimeout(function() {
+        logoImg.classList.remove('driving-away');
+        logoImg.classList.add('driving-back');
+        
+        // Remove class after animation completes
+        setTimeout(function() {
+          logoImg.classList.remove('driving-back');
+        }, 1500);
+      }, 2000);
+    });
+  })();
 </script>
