@@ -6,7 +6,7 @@
       "type": "shell",
       "command": "bundle exec jekyll serve --livereload --host 127.0.0.1",
       "options": {
-        "cwd": "${workspaceFolder}/antonsperling.github.io"
+        "cwd": "${workspaceFolder}"
       },
       "isBackground": true,
       "problemMatcher": []

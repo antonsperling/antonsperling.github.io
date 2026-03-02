@@ -22,11 +22,18 @@ permalink: /blog/
       author: {{ post.author | jsonify }},
       categories: {{ post.categories | join: ", " | jsonify }},
       excerpt: {{ post.excerpt | strip_html | truncate: 300 | jsonify }},
+      content: {{ post.content | strip_html | jsonify }},
       lang: {{ post.lang | jsonify }},
       background_image: {{ post.background_image | jsonify }}
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ];
+  
+  function calculateReadingTime(content) {
+    var wordCount = content.trim().split(/\s+/).length;
+    var readingTime = Math.ceil(wordCount / 200);
+    return readingTime < 1 ? 1 : readingTime;
+  }
   
   function renderBlogPosts() {
     var blogList = document.getElementById('blog-list');
@@ -70,7 +77,9 @@ permalink: /blog/
       metaDiv.className = 'blog-card-meta';
       var authorText = post.author ? ' — ' + post.author : '';
       var categoriesText = post.categories ? ' — ' + post.categories : '';
-      metaDiv.innerHTML = '<time datetime="' + post.date + '">' + post.date + '</time>' + authorText + categoriesText;
+      var readingTime = calculateReadingTime(post.content);
+      var readingTimeText = '<span class="blog-card-reading-time">~' + readingTime + ' min read</span>';
+      metaDiv.innerHTML = '<time datetime="' + post.date + '">' + post.date + '</time>' + authorText + categoriesText + readingTimeText;
       
       var excerptDiv = document.createElement('div');
       excerptDiv.className = 'blog-card-excerpt';
